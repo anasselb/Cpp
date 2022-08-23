@@ -1,0 +1,3 @@
+Insertion point: The new contents are inserted before the character at position pos.
+If this is greater than the object's length, it throws out_of_range.
+Note: The first character is denoted by a value of 0 (not 1).
