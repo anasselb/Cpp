@@ -6,7 +6,7 @@
 /*   By: ael-bach <ael-bach@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/18 16:33:57 by ael-bach          #+#    #+#             */
-/*   Updated: 2022/08/22 15:25:33 by ael-bach         ###   ########.fr       */
+/*   Updated: 2022/08/23 11:25:18 by ael-bach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,8 +50,10 @@ public:
 
 
     /* 4 increment/decrement */
+    /** prefix **/
     Fixed& operator++( void );
     Fixed& operator--( void );
+    /** postfix **/
     Fixed  operator++(int);
     Fixed  operator--(int);
 

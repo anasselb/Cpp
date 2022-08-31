@@ -1,35 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Fixed.hpp                                          :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ael-bach <ael-bach@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/18 16:33:57 by ael-bach          #+#    #+#             */
-/*   Updated: 2022/08/23 11:01:38 by ael-bach         ###   ########.fr       */
+/*   Created: 2022/08/26 17:22:57 by ael-bach          #+#    #+#             */
+/*   Updated: 2022/08/27 14:34:00 by ael-bach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FIXED_HPP
-#define FIXED_HPP
-#include <iostream>
-#include <string>
-#include <cmath>
+#include "Cat.hpp"
+#include "Dog.hpp"
 
-class Fixed
+int main()
 {
-private:
-    int fixe;
-    static const int  fractional;
-public:
-    Fixed();
-    Fixed(const Fixed &copy);
-    Fixed& operator=(const Fixed &copy);
-    ~Fixed();
-    int getRawBits( void ) const;
-    void setRawBits( int const raw );
-};
 
+    const Animal* meta = new Animal();
+    const Animal* j = new Dog();
+    const Animal* i = new Cat();
+    std::cout << j->getType() << " " << std::endl;
+    std::cout << i->getType() << " " << std::endl;
+    i->makeSound(); //will output the cat sound!
+    j->makeSound();
+    meta->makeSound();
 
-
-#endif
+    return 0;
+}

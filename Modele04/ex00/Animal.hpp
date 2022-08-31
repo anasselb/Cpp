@@ -1,33 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Fixed.hpp                                          :+:      :+:    :+:   */
+/*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ael-bach <ael-bach@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/18 16:33:57 by ael-bach          #+#    #+#             */
-/*   Updated: 2022/08/23 11:01:38 by ael-bach         ###   ########.fr       */
+/*   Created: 2022/08/26 17:23:30 by ael-bach          #+#    #+#             */
+/*   Updated: 2022/08/27 14:40:27 by ael-bach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FIXED_HPP
-#define FIXED_HPP
+#ifndef ANIMAL_H
+#define ANIMAL_H
 #include <iostream>
 #include <string>
-#include <cmath>
 
-class Fixed
+class Animal
 {
-private:
-    int fixe;
-    static const int  fractional;
+protected:
+    std::string type;
+    
 public:
-    Fixed();
-    Fixed(const Fixed &copy);
-    Fixed& operator=(const Fixed &copy);
-    ~Fixed();
-    int getRawBits( void ) const;
-    void setRawBits( int const raw );
+    Animal();
+    Animal(Animal& copy);
+    Animal& operator=(Animal& copy);
+    ~Animal();
+
+    std::string getType( void ) const;
+
+    virtual void    makeSound() const;
 };
 
 

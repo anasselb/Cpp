@@ -1,35 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Fixed.hpp                                          :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ael-bach <ael-bach@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/18 16:33:57 by ael-bach          #+#    #+#             */
-/*   Updated: 2022/08/23 11:01:38 by ael-bach         ###   ########.fr       */
+/*   Created: 2022/08/23 16:00:57 by ael-bach          #+#    #+#             */
+/*   Updated: 2022/08/26 10:17:49 by ael-bach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FIXED_HPP
-#define FIXED_HPP
-#include <iostream>
-#include <string>
-#include <cmath>
+#include "DiamondTrap.hpp"
 
-class Fixed
+int main()
 {
-private:
-    int fixe;
-    static const int  fractional;
-public:
-    Fixed();
-    Fixed(const Fixed &copy);
-    Fixed& operator=(const Fixed &copy);
-    ~Fixed();
-    int getRawBits( void ) const;
-    void setRawBits( int const raw );
-};
+    std::string name = "ANASS";
+    std::string name1 = "son";
+    // ClapTrap first(name);
+    DiamondTrap dervid(name);
+    dervid.attack(name);
+    dervid.whoAmI();
 
-
-
-#endif
+}

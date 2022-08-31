@@ -1,35 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Fixed.hpp                                          :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ael-bach <ael-bach@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/18 16:33:57 by ael-bach          #+#    #+#             */
-/*   Updated: 2022/08/23 11:01:38 by ael-bach         ###   ########.fr       */
+/*   Created: 2022/08/27 15:37:11 by ael-bach          #+#    #+#             */
+/*   Updated: 2022/08/27 15:40:39 by ael-bach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FIXED_HPP
-#define FIXED_HPP
-#include <iostream>
+#ifndef BRAIN_HPP
+#define BRAIN_HPP
 #include <string>
-#include <cmath>
+#include <iostream>
 
-class Fixed
+class Brain
 {
 private:
-    int fixe;
-    static const int  fractional;
-public:
-    Fixed();
-    Fixed(const Fixed &copy);
-    Fixed& operator=(const Fixed &copy);
-    ~Fixed();
-    int getRawBits( void ) const;
-    void setRawBits( int const raw );
-};
+    std::string ideas[100];
 
+public:
+    Brain();
+    Brain(Brain& copy);
+    Brain& operator=(Brain& copy);
+    ~Brain();
+};
 
 
 #endif
