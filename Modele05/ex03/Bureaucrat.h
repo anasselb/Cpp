@@ -6,7 +6,9 @@
 #define C_BUREAUCRAT_H
 #include <string>
 #include <iostream>
+#include "Form.hpp"
 
+class Form;
 
 class Bureaucrat {
     const std::string _name;
@@ -24,6 +26,8 @@ public:
     std::string getName( void ) const;
     int getGrade( void ) const;
 
+    void signedForm(Form &form);
+    void executeForm(Form const &form);
 
 class GradeTooHighException : public std::exception
 {

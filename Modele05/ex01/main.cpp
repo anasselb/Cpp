@@ -9,7 +9,8 @@
 /*   Updated: 2022/08/27 14:34:00 by ael-bach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "Bureaucrat.h"
+
+#include "Form.hpp"
 
 int main()
 {
@@ -18,11 +19,14 @@ int main()
     try
     {
         std::string name = "anass";
-        Bureaucrat ls(name,5);
-//        Bureaucrat anass(name,0);
-//        ls.increment();
-//        ls.decrement();
-        std::cout << ls << std::endl;
+//        Bureaucrat ls(name,150);
+        Bureaucrat anass(name,3);
+//        anass.increment();
+        anass.decrement();
+        std::cout << anass << std::endl;
+        Form p("DOCX",0,10,10);
+        p.beSigned(anass);
+        anass.signedForm(p);
     }
     catch (std::exception & e)
     {

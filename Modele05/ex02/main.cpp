@@ -9,7 +9,11 @@
 /*   Updated: 2022/08/27 14:34:00 by ael-bach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "Bureaucrat.h"
+#include "ShrubberyCreationForm.hpp"
+#include "RobotomyRequestForm.hpp"
+#include "PresidentialPardonForm.hpp"
 
 int main()
 {
@@ -17,12 +21,20 @@ int main()
 
     try
     {
-        std::string name = "anass";
-        Bureaucrat ls(name,5);
-//        Bureaucrat anass(name,0);
-//        ls.increment();
-//        ls.decrement();
-        std::cout << ls << std::endl;
+         std::string an = "PAAPA";
+        Bureaucrat B("ANANA", 1);
+ /* 1
+        ShrubberyCreationForm A(an);
+        A.beSigned(B);
+        A.execute(B);*/
+        RobotomyRequestForm R(an);
+        R.beSigned(B);
+        R.execute(B);
+//        PresidentialPardonForm P(an);
+//        P.beSigned(B);
+//        P.execute(B);
+        B.executeForm(R);
+
     }
     catch (std::exception & e)
     {

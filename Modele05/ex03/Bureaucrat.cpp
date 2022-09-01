@@ -44,10 +44,18 @@ void Bureaucrat::decrement() {
     _grade += 1;
 }
 
-std::ostream& operator<<(std::ostream &out, const Bureaucrat& copy)
+void Bureaucrat::signedForm(Form& form)
 {
-    out << copy.getName() << ", bureaucrat grade " << copy.getGrade() ;
-    return out;
+    if (form.getIsSigned())
+        std::cout << _name << " signed " << form.getName() << std::endl;
+    else
+        std::cout << _name << " couldn't sign  " << form.getName() << " because " << "Grade Too Low" << std::endl;
+}
+
+void Bureaucrat::executeForm(const Form &form) {
+    if (this->getGrade() > form.getGradeToExecute() || form.getIsSigned() == 0)
+        throw GradeTooLowException();
+    std::cout << this->getName() << " executed " << form.getName() << std::endl;
 }
 
 const char *Bureaucrat::GradeTooHighException::what() const throw() {
@@ -56,4 +64,10 @@ const char *Bureaucrat::GradeTooHighException::what() const throw() {
 
 const char *Bureaucrat::GradeTooLowException::what() const throw() {
     return "Grade Too Low";
+}
+
+std::ostream& operator<<(std::ostream &out, const Bureaucrat& copy)
+{
+    out << copy.getName() << ", bureaucrat grade " << copy.getGrade() ;
+    return out;
 }

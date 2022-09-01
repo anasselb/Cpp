@@ -9,7 +9,9 @@
 /*   Updated: 2022/08/27 14:34:00 by ael-bach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "Bureaucrat.h"
+#include "Intern.hpp"
 
 int main()
 {
@@ -17,12 +19,13 @@ int main()
 
     try
     {
-        std::string name = "anass";
-        Bureaucrat ls(name,5);
-//        Bureaucrat anass(name,0);
-//        ls.increment();
-//        ls.decrement();
-        std::cout << ls << std::endl;
+
+            Bureaucrat B("1nas",1);
+            Intern someRandomIntern;
+            Form* rrf;
+            rrf = someRandomIntern.makeForm("robotomy request", "Bender");
+            rrf->beSigned(B);
+            rrf->execute(B);
     }
     catch (std::exception & e)
     {
